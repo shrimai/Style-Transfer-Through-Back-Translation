@@ -1,10 +1,7 @@
 import onmt
-import numpy as np
 import argparse
 import torch
 import codecs
-import json
-import sys
 
 parser = argparse.ArgumentParser(description='preprocess.py')
 
@@ -92,9 +89,6 @@ def initVocabulary(name, dataFile, vocabFile, vocabSize):
 
 def saveVocabulary(name, vocab, file):
     print('Saving ' + name + ' vocabulary to \'' + file + '\'...')
-    #print(type(vocab))
-    #with codecs.open(file, 'w') as outfile:
-    #    json.dump(dict(vocab), outfile)
     vocab.writeFile(file)
 
 def makeData(srcFile, tgtFile, srcDicts, tgtDicts):

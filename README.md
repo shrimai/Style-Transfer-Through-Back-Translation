@@ -52,11 +52,11 @@ Place these models in the `models/style_generators` folder.
 Refer to example.sh file to see the commands.
 - First `cd style_decoder` and then preprocess your raw data using the following command:   
 ```bash
-python preprocess.py -train_src <train_source_file_path> -train_tgt <train_target_file_path> -valid_src <valid_source_file_path> -valid_tgt <train_target_file_path> -save_data <data_name>
+python preprocess.py -train_src TRAIN_SOURCE_FILE -train_tgt TRAIN_TARGET_FILE -valid_src VALID_SOURCE_FILE -valid_tgt VALID_TARGET_FILE -save_data DATA_NAME
 ```
 - Then train your model using the following command:
 ```bash
-python train_decoder.py -data <data_file_name>.train.pt -save_model <model_dir/model_file_name> -classifier_model <path_to_pretrained_classifier>.pt -encoder_model <path_to_encoder_model> -tgt_label <0/1>
+python train_decoder.py -data DATA_NAME.train.pt -save_model MODEL_DIR/MODEL_NAME -classifier_model CLASSIFIER.pt -encoder_model ENCODER_MODEL -tgt_label {0/1}
 ```
 
 ## Data

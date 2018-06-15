@@ -7,7 +7,6 @@ from torch import cuda
 from torch.autograd import Variable
 import math
 import time
-import pdb
 import sys
 import onmt
 
