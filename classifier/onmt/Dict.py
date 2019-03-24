@@ -98,6 +98,7 @@ class Dict(object):
 
         newDict = Dict()
         newDict.lower = self.lower
+        newDict.seq_length = self.seq_length
 
         # Add special entries in all cases.
         for i in self.special:
