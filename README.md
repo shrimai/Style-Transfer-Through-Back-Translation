@@ -106,6 +106,12 @@ The train, dev, test and classtrain splits are given as is. If you are using thi
       
 You can find the data used in the sentiment modification experiment described in the paper at this [link](https://github.com/shentianxiao/language-style-transfer/tree/master/data/yelp). The train, dev, test and classtrain splits are given as is.
 
+Download the data used in [Multiple-Attribute Text Rewriting](https://openreview.net/pdf?id=H1g2NhC5KQ) paper from the following link.
+```
+http://tts.speech.cs.cmu.edu/style_models/yelp_reviews.txt
+http://tts.speech.cs.cmu.edu/style_models/yelp_attrs.txt
+```
+
 ## Acknowledgements
 
 The code used to train the NMT systems is from the [OpenNMT](https://github.com/OpenNMT/OpenNMT-py)  toolkit. This code base is based on the code of the toolkit.
