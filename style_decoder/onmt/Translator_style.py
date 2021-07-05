@@ -15,15 +15,16 @@ class Translator(object):
         self.src_dict = encoder_check['dicts']['src']
         self.tgt_dict = checkpoint['dicts']['tgt']
         enc_opt = encoder_check['opt']
+        dec_opt = checkpoint['opt']
 
         encoder = onmt.Models.Encoder(enc_opt, self.src_dict)
         encoder.load_state_dict(encoder_check['encoder'])
-        decoder = onmt.Models_decoder.Decoder(enc_opt, self.tgt_dict)
+        decoder = onmt.Models_decoder.Decoder(dec_opt, self.tgt_dict)
         decoder.load_state_dict(checkpoint['decoder'])
         model = onmt.Models.NMTModel(encoder, decoder)
 
         generator = nn.Sequential(
-            nn.Linear(enc_opt.rnn_size, self.tgt_dict.size()),
+            nn.Linear(dec_opt.rnn_size, self.tgt_dict.size()),
             nn.LogSoftmax())
 
         generator.load_state_dict(checkpoint['generator'])
